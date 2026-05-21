@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Counter — LLM Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700&family=Geist:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <h1>LLM Dashboard</h1>
+      <p>A quick reference guide to Large Language Models.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="tokenCounter.html">Token Counter</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="tokenCounter">
+        <h2>Token Counter</h2>
+        <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
+        <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+
+        <div id="stats">
+          <span id="stat-chars">Characters: 0</span>
+          <span id="stat-words">Words: 0</span>
+          <span id="stat-tokens">Estimated tokens: 0</span>
+        </div>
+
+        <div id="action-buttons">
+          <button id="save-btn" disabled>Save Snapshot</button>
+          <button id="clear-btn">Clear History</button>
+        </div>
+
+        <p id="max-tokens" style="display: none;"></p>
+        <ul id="history-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Sources used to compile the data in this dashboard:</p>
+      <ul>
+        <li>Anthropic API documentation — <a href="https://docs.anthropic.com" target="_blank">docs.anthropic.com</a></li>
+        <li>OpenAI API pricing — <a href="https://openai.com/api/pricing" target="_blank">openai.com/api/pricing</a></li>
+        <li>Google AI Gemini pricing — <a href="https://ai.google.dev/pricing" target="_blank">ai.google.dev/pricing</a></li>
+        <li>DeepSeek API pricing — <a href="https://platform.deepseek.com/api-docs/pricing" target="_blank">platform.deepseek.com</a></li>
+        <li>DevTk.ai API pricing comparison — <a href="https://artificialanalysis.ai/" target="_blank">artificialanalysis.ai</a></li>
+      </ul>
+      <p>Last updated: May 2026</p>
+    </footer>
+
+    <script src="tokenCounter.js"></script>
+  </body>
+</html>
